@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Barani Kumar Portfolio - AI-Inspired Design System
+All colors MUST be HSL for consistent theming.
+*/
+
+@layer base {
+  :root {
+    /* Enhanced Purple AI-Inspired Color Palette */
+    --background: 270 50% 95%;
+    --foreground: 270 20% 10%;
+
+    /* Card glassmorphism with purple tint */
+    --card: 270 50% 97%;
+    --card-foreground: 270 20% 10%;
+
+    --popover: 270 50% 97%;
+    --popover-foreground: 270 20% 10%;
+
+    /* Primary Purple Colors */
+    --primary: 270 90% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 270 100% 75%;
+
+    /* Secondary Purple accent */
+    --secondary: 280 100% 96%;
+    --secondary-foreground: 270 90% 60%;
+
+    /* Muted glass effect with purple */
+    --muted: 270 50% 96%;
+    --muted-foreground: 270 20% 45%;
+
+    /* Accent purple */
+    --accent: 320 100% 90%;
+    --accent-foreground: 270 90% 60%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Glass borders with purple */
+    --border: 270 50% 90%;
+    --input: 270 50% 95%;
+    --ring: 270 84% 54%;
+
+    --radius: 1rem;
+
+    /* Purple AI Design System Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(270 84% 54%), hsl(290 100% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(270 84% 54%) 0%, hsl(290 100% 70%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(270 50% 97% / 0.8), hsl(280 50% 97% / 0.4));
+    --gradient-card: linear-gradient(135deg, hsl(270 50% 97% / 0.9), hsl(280 50% 96% / 0.7));
+    
+    /* Purple Glowing effects */
+    --glow-primary: 0 0 30px hsl(270 84% 54% / 0.3);
+    --glow-secondary: 0 0 40px hsl(290 100% 70% / 0.4);
+    --glow-text: 0 0 20px hsl(270 84% 54% / 0.6);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Purple Glass morphism shadows */
+    --shadow-glass: 0 8px 32px hsl(270 84% 54% / 0.1);
+    --shadow-glow: 0 0 40px hsl(270 84% 54% / 0.15);
+    --shadow-card: 0 10px 30px hsl(270 20% 10% / 0.1);
+
+    --sidebar-background: 270 50% 97%;
+    --sidebar-foreground: 270 20% 10%;
+    --sidebar-primary: 270 90% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 50% 95%;
+    --sidebar-accent-foreground: 270 90% 60%;
+    --sidebar-border: 270 50% 90%;
+    --sidebar-ring: 270 84% 54%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Dancing Script', cursive !important;
+    background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 25%, #a855f7 50%, #c084fc 75%, #e879f9 100%);
+    box-shadow: 0 0 120px 40px #a855f7 inset, 0 0 240px 80px #c084fc inset;
+    min-height: 100vh;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Dancing Script', cursive !important;
+    transition: font-variation-settings 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+  h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    font-variation-settings: 'wght' 700;
+    color: hsl(var(--primary));
+  }
+  
+  code, pre {
+    @apply font-mono;
+  }
+
+  body, h1, h2, h3, h4, h5, h6, p, span, div, a, li, label, input, textarea, button {
+    color: hsl(var(--foreground) / 0.95) !important;
+  }
+  .text-foreground {
+    color: hsl(var(--foreground) / 0.95) !important;
+  }
+  .text-muted-foreground {
+    color: rgba(30,30,30,0.95) !important;
+  }
+  .text-primary {
+    color: hsl(var(--primary) / 0.95) !important;
+  }
+  .text-accent {
+    color: hsl(var(--accent) / 0.95) !important;
+  }
+  .text-secondary {
+    color: hsl(var(--secondary-foreground) / 0.95) !important;
+  }
+  .glow-text {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.7);
+  }
+}
+
+@layer components {
+  /* Glass morphism card with purple tint */
+  .glass-card {
+    @apply backdrop-blur-xl border border-purple-300/30 bg-purple-50/20 rounded-2xl;
+    box-shadow: var(--shadow-glass);
+  }
+  
+  /* Glowing text effect */
+  .glow-text {
+    text-shadow: var(--glow-text);
+  }
+  
+  /* Hero gradient */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  /* Floating animation */
+  .float {
+    @apply animate-bounce;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  
+  /* Pulse glow */
+  .pulse-glow {
+    @apply animate-pulse;
+    box-shadow: var(--glow-primary);
+  }
+  
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+}
+
+@layer utilities {
+  /* Gradient backgrounds */
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  /* Animation utilities */
+  .animate-fade-in {
+    @apply animate-in fade-in duration-700;
+  }
+  
+  .animate-slide-up {
+    @apply animate-in slide-in-from-bottom-4 duration-700;
+  }
+  
+  .animate-scale-in {
+    @apply animate-in zoom-in-95 duration-500;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(168,85,247,0.1) 25%, rgba(168,85,247,0.3) 50%, rgba(168,85,247,0.1) 75%);
+  background-size: 800px 100%;
+  animation: shimmer 2s infinite linear;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
