@@ -77,7 +77,7 @@ const App = () => {
           <CinematicTitleCard onFinish={() => setShowOverlay(false)} />
         )}
         <AnimatedMainContent show={!showOverlay}>
-          <BrowserRouter>
+          <BrowserRouter basename="/SKPORTFOLIO">
             <Routes>
               <Route path="/" element={<Index />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
